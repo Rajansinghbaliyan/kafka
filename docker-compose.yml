@@ -45,3 +45,10 @@ services:
       JVM_OPTS: "-Xms16M -Xmx48M -Xss180K -XX:-TieredCompilation -XX:+UseStringDeduplication -noverify"
     depends_on:
       - broker
+  ubuntu:
+    image: ubuntu/kafka
+    container_name: ubuntu
+    restart: on-failure
+    command:
+      - "sleep"
+      - "infinity"
